@@ -1,166 +1,163 @@
 <div align="center">
 
 <h1>🕵️ NDT Antidetect Tools</h1>
+<p><a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/License-MIT-64748b?style=flat-square"></a> <img alt="Pricing review date" src="https://img.shields.io/badge/Price_review-2026--10--27-2563eb?style=flat-square"></p>
 
-**Directory về anti-detect browser, fingerprint testing, automation runtime và bot detection.**
 
-[![Pricing research date](https://img.shields.io/badge/Price_review-27%20Oct%202026-7c3aed?style=for-the-badge)](https://github.com/nguyenduytan)
-[![Direct links](https://img.shields.io/badge/links-direct%20%7C%20no%20affiliate-16a34a?style=for-the-badge)](#methodology)
-[![License](https://img.shields.io/badge/license-MIT-64748b?style=for-the-badge)](LICENSE)
+**Anti-detect browsers, fingerprint testing, automation runtimes and bot-detection resources.**
 
-**[Browsers](#anti-detect-browsers) · [Tests](#detection-and-fingerprint-tests) · [Open source](#open-source-runtimes) · [Model](#what-an-antidetect-stack-can-and-cannot-do)**
+[![Language](https://img.shields.io/badge/language-English-7c3aed?style=for-the-badge)](README.md) [![Tiếng Việt](https://img.shields.io/badge/README-Ti%E1%BA%BFng%20Vi%E1%BB%87t-16a34a?style=for-the-badge)](README.vi.md) [![Direct links](https://img.shields.io/badge/links-direct%20%7C%20no%20affiliate-16a34a?style=for-the-badge)](#methodology)
+
+**[Browsers](#anti-detect-browsers) · [Tests](#detection-and-fingerprint-tests) · [Open source](#open-source-runtimes) · [Limits](#what-an-antidetect-stack-can-and-cannot-do)**
 
 </div>
 
 > [!IMPORTANT]
-> Anti-detect không bảo đảm ẩn danh hay truy cập thành công. Website có thể kết hợp IP, ASN, TLS, browser fingerprint, hành vi và lịch sử account. Dùng cho QA, privacy research, test isolation và vận hành hợp pháp.
+> Anti-detect does not guarantee anonymity or access. Sites can combine IP reputation, ASN, TLS, browser signals, behavior and account history. Use these tools for authorized QA, privacy research, test isolation and legitimate profile operations.
 
 ## Quick picks
 
-| Nhu cầu | Bắt đầu với | Nhận xét |
+| Need | Start with | Why |
 |---|---|---|
-| Giá thấp, ít profile | [MoreLogin](https://www.morelogin.com/pricing), [DICloak](https://dicloak.com/pricing), [Hidemyacc](https://hidemyacc.com/pricing) | Có free tier và gói nhỏ |
-| Agency/team | [AdsPower](https://www.adspower.com/pricing), [GoLogin](https://gologin.com/pricing/), [Incogniton](https://incogniton.com/pricing/) | Team, API, profile sharing |
-| Browser kernel chuyên biệt | [Multilogin](https://multilogin.com/pricing/), [Kameleo](https://kameleo.io/pricing), [Octo Browser](https://octobrowser.net/pricing/) | Nhiều profile và browser/runtime controls |
-| Developer-controlled | [Camoufox](https://github.com/daijro/camoufox), [Hexium Browser](https://github.com/HeadlessXLabs/hexium-browser), [Firefox stealth](https://github.com/feder-cr/firefox-stealth) | Có thể self-host và kiểm tra source |
-| Chẩn đoán detection | [CreepJS](https://abrahamjuliot.github.io/creepjs/), [BrowserLeaks](https://browserleaks.com/), [Fingerprint Playground](https://demo.fingerprint.com/playground) | Nhìn thấy signal bị lộ hoặc mâu thuẫn |
+| Low-cost profiles | [MoreLogin](https://www.morelogin.com/pricing), [DICloak](https://dicloak.com/pricing), [Hidemyacc](https://hidemyacc.com/pricing) | Small free tiers and low entry plans |
+| Agencies and teams | [AdsPower](https://www.adspower.com/pricing), [GoLogin](https://gologin.com/pricing/), [Incogniton](https://incogniton.com/pricing/) | APIs, sharing and collaboration |
+| Browser kernels | [Multilogin](https://multilogin.com/pricing), [Kameleo](https://kameleo.io/pricing), [Octo Browser](https://octobrowser.net/pricing/) | Mature profile and runtime controls |
+| Developer-controlled | [Camoufox](https://github.com/daijro/camoufox), [Hexium Browser](https://github.com/HeadlessXLabs/hexium-browser), [Firefox stealth](https://github.com/feder-cr/firefox-stealth) | Self-hosted and source-visible options |
+| Detection diagnosis | [CreepJS](https://abrahamjuliot.github.io/creepjs/), [BrowserLeaks](https://browserleaks.com/), [Fingerprint Playground](https://demo.fingerprint.com/playground) | Browser, network and device signals |
 
+<a id="anti-detect-browsers"></a>
 ## Anti-detect browsers
 
-Giá là public starting points được kiểm tra 2026-10-27; dashboard, term và profile count có thể làm thay đổi tổng tiền.
+| Tool | Public price/free tier | Automation | Practical note |
+|---|---:|---|---|
+| [MoreLogin](https://www.morelogin.com/pricing) | Free 2 profiles; Pro $9/month or $5.40/month equivalent when billed yearly for 10 profiles | Selenium, Puppeteer, Local API | Low entry cost; validate browser/OS consistency |
+| [DICloak](https://dicloak.com/pricing) | Free 5 profiles/15 opens daily; Base $8/month | RPA, API, MCP | Generous small free tier; daily limits matter |
+| [Hidemyacc](https://hidemyacc.com/pricing) | Mini $10; Starter $29; Base $49/month; 7-day trial | API/automation | Clear profile tiers; team cost rises quickly |
+| [GoLogin](https://gologin.com/pricing/) | Public view from $4.50/month annual; 7-day trial | API/integrations | Cloud profiles and proxy support |
+| [AdsPower](https://www.adspower.com/pricing) | Free 2 profiles; 7-day full trial | Local API, RPA, Synchronizer | Strong team workflow; paid price is dynamic |
+| [Incogniton](https://incogniton.com/pricing/) | Starter Plus $19.99; Entrepreneur $29.99/month | Selenium, Puppeteer, API | Cookie collector and synchronizer |
+| [Multilogin](https://multilogin.com/pricing/) | Free 5 profiles; paid from $11/month monthly entry | API | Cloud and mobile profiles; scales by seats |
+| [Kameleo](https://kameleo.io/pricing) | Free 2 concurrent browsers; Startup €59/month | Playwright/Puppeteer | Custom kernels and mobile emulation |
+| [Octo Browser](https://octobrowser.net/pricing/) | Lite €10/month for 3 profiles | API | Mature profile/API model; team plans cost more |
+| [Dolphin Anty](https://dolphin-anty.com/) | Free access; live pricing | API, synchronizer | Agency and multi-account workflows |
+| [NSTBrowser](https://www.nstbrowser.io/en) | Built-in proxy from $0.40/GB | RPA/API | Anti-detect plus proxy and Cloudflare tools |
+| [RoxyBrowser](https://roxybrowser.com/) | Trial and profile plans | Automation | Social, ecommerce and SEO use cases |
 
-| Tool | Giá / free tier | Automation | Điểm mạnh | Cần kiểm tra |
-|---|---:|---|---|---|
-| [MoreLogin](https://www.morelogin.com/pricing) | Free 2 profile; Pro $9/tháng; tương đương $5.40/tháng khi trả theo năm, 10 profile | Selenium, Puppeteer, Local API | Entry cost thấp, canvas và team | Browser version, OS coherence, target compatibility |
-| [DICloak](https://dicloak.com/pricing) | Free 5 profile/15 lần mở mỗi ngày; Base $8/tháng | RPA, API, MCP | Free tier rộng, nhiều tool phụ trợ | Daily open và team limits |
-| [Hidemyacc](https://hidemyacc.com/pricing) | Mini $10, Starter $29, Base $49/tháng; trial 7 ngày | API/automation | Bảng profile rõ, Windows/Linux/Mac | Chi phí team tăng nhanh |
-| [GoLogin](https://gologin.com/pricing/) | Giá hiển thị từ $4.50/tháng ở annual view; trial 7 ngày | API/integrations | Cloud profile, proxy, team | Giá đổi theo profile và billing term |
-| [AdsPower](https://www.adspower.com/pricing) | Free 2 profile; trial đầy đủ 7 ngày | Local API, RPA, Synchronizer | Multi-account và team tốt | Paid price dynamic |
-| [Incogniton](https://incogniton.com/pricing/) | Starter Plus $19.99; Entrepreneur $29.99/tháng | Selenium, Puppeteer, API | Cookie collector, synchronizer | Profile/seat limits |
-| [Multilogin](https://multilogin.com/pricing/) | Free 5 profile; paid từ $11/tháng monthly entry | API | Browser và mobile profiles | Tăng giá theo profile/seat |
-| [Kameleo](https://kameleo.io/pricing) | Free 2 browser; Startup €59/tháng | Playwright/Puppeteer | Custom kernels, mobile emulation | Tính theo concurrent browser |
-| [Octo Browser](https://octobrowser.net/pricing/) | Lite €10/tháng cho 3 profile | API | Profile và API mature | Gói team/API đắt hơn |
-| [Dolphin Anty](https://dolphin-anty.com/) | Free access; giá live | API, synchronizer | Agency và multi-account | Xác nhận giá hiện tại |
-| [NSTBrowser](https://www.nstbrowser.io/en) | Proxy tích hợp từ $0.40/GB | RPA/API | Anti-detect + proxy + cloudflare tools | Sản phẩm mới, test stability |
-| [RoxyBrowser](https://roxybrowser.com/) | Trial và gói profile giá thấp | Automation | Social/ecommerce/SEO | Kiểm tra độc lập fingerprint |
+## Extended browser directory
 
-## Danh bạ browser mở rộng
+These entries require further review of pricing, API quotas and maintenance. Historical prices are not current quotes.
 
-Các tên dưới đây để nghiên cứu thêm; chưa xác minh đầy đủ giá, hạn mức API hoặc tình trạng bảo trì. Không dùng giá lịch sử làm giá hiện tại.
-
-| Provider / project | Link trực tiếp | Điểm cần đối chiếu |
+| Provider / project | Direct link | What to verify |
 |---|---|---|
-| Undetectable | [Website](https://undetectable.io/pricing/) | Cloud/local profile và phí cấu hình; giá năm khác giá tháng |
-| BitBrowser | [Website](https://www.bitbrowser.net/) | Local API, RPA và số profile |
-| VMLogin | [Website](https://www.vmlogin.us/) | OS hỗ trợ, team và API |
-| Indigo | [Website](https://indigobrowser.com/) | Phân quyền, migration và profile limits |
-| ixBrowser | [Website](https://www.ixbrowser.com/) | Hạn mức tạo/mở profile và quyền automation |
-| GPMLogin | [Website](https://gpmloginapp.com/en) | License theo máy, update và API |
-| Bablosoft BAS | [Website](https://bablosoft.com/shop/BrowserAutomationStudio) | Automation studio; fingerprint dịch vụ riêng |
-| Ghost Browser | [Website](https://ghostbrowser.com/) | Session isolation không tự chứng minh chống fingerprint |
-| DonutBrowser | [Website](https://donutbrowser.com/) | Profile local, backup và đồng bộ |
-| Wade | [Website](https://wade.is/) | Quyền API theo gói |
-| Linken Sphere | [Website](https://linkensphere.info/en/) | Engine, license và update; không lặp tin đồn chưa kiểm chứng |
-| WhoLogin | [Website](https://whologin.com/) | Free profile khác quyền automation |
-| ADBLogin | [Website](https://adblogin.com/) | Giới hạn thực của free tier |
-| DashNull | [Website](https://dashnull.com/) | Phạm vi chỉnh fingerprint và tích hợp VPN |
-| ShardBrowser | [Source](https://github.com/ProxyShard/ShardBrowser) | Release, license và platform |
-| CloakBrowser | [Source](https://github.com/CloakHQ/CloakBrowser) | Phiên bản kernel và gói thương mại |
-| PotaBrowser | [Source](https://github.com/snaberino/pota-browser) | Build, release và compatibility |
+| Undetectable | [Website](https://undetectable.io/pricing/) | Cloud/local profiles and configuration fees; annual differs from monthly |
+| BitBrowser | [Website](https://www.bitbrowser.net/) | Local API, RPA and profile limits |
+| VMLogin | [Website](https://www.vmlogin.us/) | Supported OS, team and API |
+| Indigo | [Website](https://indigobrowser.com/) | Permissions, migration and profile limits |
+| ixBrowser | [Website](https://www.ixbrowser.com/) | Profile creation/launch quotas and automation access |
+| GPMLogin | [Website](https://gpmloginapp.com/en) | Per-machine license, updates and API |
+| Bablosoft BAS | [Website](https://bablosoft.com/shop/BrowserAutomationStudio) | Automation studio; fingerprint services are separate |
+| Ghost Browser | [Website](https://ghostbrowser.com/) | Session isolation does not establish fingerprint resistance |
+| DonutBrowser | [Website](https://donutbrowser.com/) | Local profiles, backup and synchronization |
+| Wade | [Website](https://wade.is/) | API access by plan |
+| Linken Sphere | [Website](https://linkensphere.info/en/) | Engine, license and updates; avoid unverified rumors |
+| WhoLogin | [Website](https://whologin.com/) | Free profiles do not imply free automation |
+| ADBLogin | [Website](https://adblogin.com/) | Actual limits of the free tier |
+| DashNull | [Website](https://dashnull.com/) | Fingerprint controls and VPN integration |
+| ShardBrowser | [Source](https://github.com/ProxyShard/ShardBrowser) | Releases, license and platforms |
+| CloakBrowser | [Source](https://github.com/CloakHQ/CloakBrowser) | Kernel version and commercial tiers |
+| PotaBrowser | [Source](https://github.com/snaberino/pota-browser) | Builds, releases and compatibility |
 
 ## Detection and fingerprint tests
 
 ### Browser fingerprint
 
-- [CreepJS](https://abrahamjuliot.github.io/creepjs/) — canvas, WebGL, fonts, audio, DOM, navigator, worker và headless signals.
-- [BrowserLeaks](https://browserleaks.com/) — IP, JavaScript, WebRTC, canvas, WebGL, fonts, DNS và TLS.
-- [Fingerprint Playground](https://demo.fingerprint.com/playground) — device-intelligence demo.
-- [Pixelscan](https://pixelscan.net/), [AmIUnique](https://amiunique.org/fingerprint), [Cover Your Tracks](https://coveryourtracks.eff.org/), [BrowserScan](https://www.browserscan.net/en), [SannySoft](https://bot.sannysoft.com/).
+- [CreepJS](https://abrahamjuliot.github.io/creepjs/), [BrowserLeaks](https://browserleaks.com/), [Fingerprint Playground](https://demo.fingerprint.com/playground)
+- [Pixelscan](https://pixelscan.net/), [AmIUnique](https://amiunique.org/fingerprint), [Cover Your Tracks](https://coveryourtracks.eff.org/), [BrowserScan](https://www.browserscan.net/en), [SannySoft](https://bot.sannysoft.com/)
 
-### Automation and behavior
+CreepJS inspects canvas, WebGL, fonts, audio, DOM, navigator, workers and headless signals. BrowserLeaks covers IP, JavaScript, WebRTC, rendering, DNS and TLS. Fingerprint Playground is a device-intelligence demo.
 
-- [Rebrowser Bot Detector](https://bot-detector.rebrowser.net/)
-- [Brotector](https://kaliiiiiiiiii.github.io/brotector/)
-- [Incolumitas Bot Classification](https://bot.incolumitas.com/)
-- [Cloudflare Turnstile demo](https://nowsecure.nl/)
-- [Google reCAPTCHA v3 demo](https://recaptcha-demo.appspot.com/recaptcha-v3-request-scores.php)
+### Automation and network
 
-### Network and connection
-
-- [BrowserLeaks WebRTC](https://browserleaks.com/webrtc), [BrowserLeaks DNS](https://browserleaks.com/dns)
-- [ProxyDetect](https://proxydetect.live/), [IPRoyal WebRTC](https://iproyal.com/webrtc-leak-test/)
+- [Rebrowser Bot Detector](https://bot-detector.rebrowser.net/), [Brotector](https://kaliiiiiiiiii.github.io/brotector/), [Incolumitas](https://bot.incolumitas.com/)
+- [BrowserLeaks WebRTC](https://browserleaks.com/webrtc), [BrowserLeaks DNS](https://browserleaks.com/dns), [ProxyDetect](https://proxydetect.live/)
 - [FingerBank](https://fingerbank.org/), [TLS Client Test](https://tls.peet.ws/), [DNS Leak Test](https://dnsleaktest.com/)
+
+- [Cloudflare challenge demo](https://nowsecure.nl/), [reCAPTCHA v3 score demo](https://recaptcha-demo.appspot.com/recaptcha-v3-request-scores.php), [IPRoyal WebRTC test](https://iproyal.com/webrtc-leak-test/)
 
 ## Open-source runtimes
 
-| Project | Runtime | Mục đích | Lưu ý |
+| Project | Runtime | Purpose | Note |
 |---|---|---|---|
-| [Camoufox](https://github.com/daijro/camoufox) | Firefox/Python | Browser patched cho fingerprint experiments | Self-host, đọc license/release |
-| [Hexium Browser](https://github.com/HeadlessXLabs/hexium-browser) | Chromium/Playwright | C++ persona, không JS injector | Linux x86_64 alpha, AGPL |
-| [Firefox stealth](https://github.com/feder-cr/firefox-stealth) | Firefox | Patch canvas/WebGL/fonts/audio/WebRTC/timezone | Research-oriented |
-| [Apify Fingerprint Suite](https://github.com/apify/fingerprint-suite) | Node.js | Fingerprint generation và automation | Test theo browser version |
-| [Rebrowser patches](https://github.com/rebrowser/rebrowser-patches) | Chromium/Puppeteer/Playwright | Isolated automation | Theo dõi compatibility |
-| [NoDriver](https://github.com/ultrafunkamsterdam/nodriver) | Python | Driverless browser | API thay đổi nhanh |
-| [ZenDriver](https://github.com/stephanlensky/zendriver) | Python | NoDriver-derived automation | Xem maintenance |
-| [Selenium Driverless](https://github.com/kaliiiiiiiiii/Selenium-Driverless) | Python | Driverless Selenium-style | Không phải stealth layer hoàn chỉnh |
-| [curl-impersonate](https://github.com/lwthiker/curl-impersonate) | CLI/C | TLS/HTTP client profiles | Không thay thế browser fingerprint |
-| [curl_cffi](https://github.com/yifeikong/curl_cffi) | Python | Browser-like TLS requests | Chỉ HTTP client |
-| [CycleTLS](https://github.com/Danny-Dasilva/CycleTLS) | Node/Go | TLS client experiments | Kiểm tra activity |
+| [Camoufox](https://github.com/daijro/camoufox) | Firefox/Python | Patched browser for fingerprint experiments | Self-hosted; read license and releases |
+| [Hexium Browser](https://github.com/HeadlessXLabs/hexium-browser) | Chromium/Playwright | C++ persona approach | Linux x86_64 alpha; AGPL |
+| [Firefox stealth](https://github.com/feder-cr/firefox-stealth) | Firefox | Source-level fingerprint patches | Research-oriented |
+| [Apify Fingerprint Suite](https://github.com/apify/fingerprint-suite) | Node.js | Fingerprint generation and automation | Test supported browser versions |
+| [Rebrowser patches](https://github.com/rebrowser/rebrowser-patches) | Chromium/Puppeteer/Playwright | Isolated automation | Compatibility changes quickly |
+| [NoDriver](https://github.com/ultrafunkamsterdam/nodriver) | Python | Driverless automation | Not a universal stealth layer |
+| [Selenium Driverless](https://github.com/kaliiiiiiiiii/Selenium-Driverless) | Python | Driverless Selenium-style control | Validate maintenance |
+| [curl-impersonate](https://github.com/lwthiker/curl-impersonate) | CLI/C | TLS/HTTP client profiles | Does not replace browser identity |
+| [curl_cffi](https://github.com/yifeikong/curl_cffi) | Python | Browser-like TLS requests | HTTP client only |
 
-## Dịch vụ phát hiện phía website và tài nguyên bổ sung
+- [ZenDriver](https://github.com/stephanlensky/zendriver): Python automation derived from NoDriver; review maintenance.
+- [CycleTLS](https://github.com/Danny-Dasilva/CycleTLS): Node/Go TLS client experiments; check current activity.
 
-| Nguồn | Vai trò | Cách đánh giá |
+## Detection vendors and QA resources
+
+| Resource | Role | What to evaluate |
 |---|---|---|
-| [Fingerprint](https://fingerprint.com/) | Device intelligence / visitor identification | Accuracy và false-positive trên dữ liệu của bạn |
-| [DataDome](https://datadome.co/) | Bot management | Tích hợp backend/CDN và quan sát traffic hợp lệ |
-| [Kasada](https://www.kasada.io/) | Bot defense / account intelligence | Hiệu quả bảo vệ và ảnh hưởng UX |
-| [hCaptcha](https://www.hcaptcha.com/) | Challenge / fraud signals | Friction và accessibility |
-| [Cloudflare docs](https://developers.cloudflare.com/bots/) | Bot management | Hiểu score, deployment và logging |
-| [Browserbase](https://www.browserbase.com/) | Hosted browser sessions | Compute, proxy và replay; không phải browser desktop |
-| [BrowserStack](https://www.browserstack.com/) | Cross-browser/device QA | Baseline trên browser/device thật; không phải antidetect |
-| [Playwright](https://playwright.dev/) | Automation và test isolation | Baseline trước khi thêm patch |
-| [OpenWPM](https://github.com/openwpm/OpenWPM) | Đo tracking/fingerprinting | Dùng cho nghiên cứu đo lường |
-| [FingerprintJS](https://github.com/fingerprintjs/fingerprintjs) | Fingerprint library | OSS khác sản phẩm thương mại |
-| [got-scraping](https://github.com/apify/got-scraping) | HTTP client | Không thực thi toàn bộ browser JS |
-| [Puppeteer Extra](https://github.com/berstend/puppeteer-extra) | Plugin ecosystem | Kiểm tra release và browser compatibility |
+| [Fingerprint](https://fingerprint.com/) | Device intelligence | Accuracy and false positives |
+| [DataDome](https://datadome.co/) | Bot management | Backend/CDN integration and valid traffic |
+| [Kasada](https://www.kasada.io/) | Bot and account intelligence | Protection and UX impact |
+| [Browserbase](https://www.browserbase.com/) | Hosted browser sessions | Compute, proxy and replay costs |
+| [BrowserStack](https://www.browserstack.com/) | Real browser/device QA | Clean baseline; not an antidetect browser |
+| [Playwright](https://playwright.dev/) | Automation baseline | Behavior before adding patches |
+| [OpenWPM](https://github.com/openwpm/OpenWPM) | Fingerprinting research | Measurement and reproducibility |
+| [FingerprintJS](https://github.com/fingerprintjs/fingerprintjs) | Open-source fingerprinting | Separate OSS library from commercial service |
 
-### Đọc kết quả test đúng cách
+- [hCaptcha](https://www.hcaptcha.com/): challenge and fraud signals; evaluate friction and accessibility.
+- [Cloudflare bot documentation](https://developers.cloudflare.com/bots/): scoring, deployment and logging.
+- [got-scraping](https://github.com/apify/got-scraping): HTTP client; does not execute a full browser environment.
+- [Puppeteer Extra](https://github.com/berstend/puppeteer-extra): plugin ecosystem; check browser compatibility and releases.
 
-Một điểm xanh ở demo không chứng minh mọi website sẽ chấp nhận. CreepJS kiểm tra tính nhất quán của signal; một dịch vụ thương mại còn có lịch sử account và dữ liệu phía server. Browser privacy thông thường cũng có thể tạo false positive. Lưu baseline browser sạch, so trước/sau từng thay đổi và ghi phiên bản test. Không coi tính độc nhất thấp, ít leak và ít dấu hiệu automation là cùng một chỉ số.
+### Interpreting test results
 
-### Chi phí thực của browser
+A green demo result does not guarantee acceptance elsewhere. Commercial services may also use server-side data and account history. Ordinary privacy browsers can produce false positives. Keep a clean-browser baseline, compare one change at a time and record versions. Low uniqueness, fewer leaks and fewer automation signals are different measurements.
+
+### Total browser cost
 
 ```text
-chi phí tháng = license theo đúng kỳ hạn + team seats + proxy + compute
-             + cloud storage/phone + thời gian vận hành
+monthly cost = license for the actual billing term + team seats + proxy + compute
+             + cloud storage/phone + operating time
 ```
 
-Số profile lưu trữ không bằng số browser chạy đồng thời. API rate limit, số lần mở/ngày và RAM/CPU có thể giới hạn trước khi hết profile. Gói năm hiển thị giá tương đương/tháng vẫn phải trả theo kỳ năm; proxy kèm theo không mặc định đủ traffic.
+Included proxy traffic may not cover your workload.
 
+<a id="what-an-antidetect-stack-can-and-cannot-do"></a>
 ## What an antidetect stack can and cannot do
 
-Một stack thực tế gồm: **network identity** (IP/ASN/DNS/WebRTC), **transport identity** (TLS/HTTP2), **browser identity** (UA/client hints/screen/fonts/WebGL/canvas/audio/timezone), **runtime integrity** (webdriver/hooks/extensions), **behavior** (typing, pointer, focus, dwell) và **account history** (cookies, device graph, login). Browser chỉ đổi user-agent là chưa đủ; proxy chỉ đổi IP cũng chưa đủ.
+A real stack has network identity (IP/ASN/DNS/WebRTC), transport identity (TLS/HTTP2), browser identity (client hints, screen, fonts, WebGL, canvas, audio and timezone), runtime integrity (webdriver/hooks/extensions), behavior and account history. Changing only the user-agent is insufficient; changing only the IP is insufficient.
+
+Stored profiles are not the same as concurrent browsers. API rate limits, opens per day and CPU/RAM can become the first limit. Annual prices shown as a monthly equivalent still require an annual payment.
 
 ## Evaluation checklist
 
-- Browser engine có cập nhật và đồng bộ với OS/locale/timezone/IP không?
-- Có export/import profile an toàn, revoke team access và local API rõ ràng không?
-- Fingerprint test có tín hiệu mâu thuẫn không?
-- Profile có tái tạo được sau upgrade không?
-- Proxy credentials có được bảo vệ không?
-- Đã test workflow thật với p50/p95, false positive và account history chưa?
+- Are browser engine, OS, locale, timezone and IP coherent?
+- Can profiles be exported, restored and revoked safely?
+- Are APIs documented and rate-limited?
+- Do independent tests show contradictory signals?
+- Can a profile be reproduced after an upgrade?
+- Have you measured false positives and real workflow outcomes?
 
-## Methodology
+<a id="methodology"></a>
+## Notes and contributions
 
-**Phạm vi:** Đây là khảo sát tài liệu công khai, chưa chạy benchmark hoặc mua thử toàn bộ dịch vụ. Danh bạ mở rộng chưa chốt giá/tình trạng bảo trì. Không có nhà cung cấp tốt nhất cho mọi workload. Xem [nguồn](SOURCES.md) và [cách đóng góp](CONTRIBUTING.md).
+Prices were checked on 2026-10-27 and are not quotes. Provider links are direct and contain no affiliate parameters. Vendor success claims are not independent benchmarks. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
+## Related NDT projects
 
-Link trực tiếp, bỏ referral/affiliate. Giá kiểm tra 2026-10-27. Claims về success/accuracy là vendor claims, không phải benchmark độc lập. Danh sách lấy cảm hứng từ [TheGP/untidetect-tools](https://github.com/TheGP/untidetect-tools) nhưng cấu trúc, mô tả và link được biên tập lại.
-
-## Related NDT lists
-
+- [NDT Proxy Scraper](https://github.com/nguyenduytan/NDT-Proxy-Scraper)
 - [NDT Proxy Providers List](https://github.com/nguyenduytan/NDT-Proxy-Providers-List)
 - [NDT Captcha Solver Services](https://github.com/nguyenduytan/NDT-Captcha-Solver-Services)
 
 > [!WARNING]
-> Chỉ dùng cho automation được ủy quyền, QA, accessibility, privacy testing và nghiên cứu. Không dùng để chiếm account, gian lận hoặc vượt access control.
+> Use these tools for lawful, authorized automation, QA, accessibility, privacy testing and research. Do not use them to take over accounts or bypass access controls.

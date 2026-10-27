@@ -1,6 +1,6 @@
 {
   "name": "NDT-Antidetect-Tools",
-  "description": "Antidetect browsers, fingerprint testing, bot detection and automation resources with pricing and practical evaluation notes.",
+  "description": "Antidetect browsers, fingerprint testing, bot detection and automation resources with pricing and practical evaluation notes English / Ti\u1ebfng Vi\u1ec7t.",
   "topics": [
     "antidetect",
     "browser-fingerprinting",
@@ -10,7 +10,9 @@
     "playwright",
     "selenium",
     "awesome-list",
-    "vietnamese"
+    "vietnamese",
+    "english",
+    "bilingual"
   ],
   "private": false
 }
